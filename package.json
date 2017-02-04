@@ -25,7 +25,10 @@
   "scripts": {
     "dev": "NODE_ENV=development nodemon -w src --exec \"babel-node src\"",
     "test": "NODE_ENV=test standard && jest",
-    "test:watch": "NODE_ENV=test jest --watch"
+    "test:watch": "NODE_ENV=test jest --watch",
+    "build": "./node_modules/.bin/babel-node src -s -D -d dist",
+    "start": "node dist",
+    "prestart": "npm run -s build"
   },
   "standard": {
     "globals": [
