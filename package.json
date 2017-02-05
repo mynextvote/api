@@ -6,6 +6,7 @@
   "repository": {},
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.1",
     "express": "^4.14.1",
     "express-graphql": "^0.6.2",
     "graphql": "^0.9.1",
