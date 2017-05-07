@@ -7,18 +7,15 @@ import {
 describe('utils', () => {
   describe('genElectionName', () => {
     describe('general elections', () => {
-      it('should generate a proper election name for a midterm year', () => {
-        const expected = '2018 general election (midterm)'
-        const result = genElectionName(2018)
+      const checkYear = (year, description) =>
+        expect(genElectionName(year)).toEqual(description)
 
-        expect(result).toEqual(expected)
+      it('should generate a proper election name for a midterm year', () => {
+        checkYear(2018, '2018 general election (midterm)')
       })
 
       it('should generate a proper election name for an election year', () => {
-        const expected = '2020 general election'
-        const result = genElectionName(2020)
-
-        expect(result).toEqual(expected)
+        checkYear(2020, '2020 general election')
       })
     })
   })
