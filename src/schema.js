@@ -8,6 +8,7 @@ import {
 } from 'graphql'
 
 import fetch from 'isomorphic-fetch'
+import tuesday from 'mnv-tuesday'
 
 import {
   formSunlightRequest,
@@ -36,7 +37,8 @@ const ElectionType = new GraphQLObjectType({
     },
     date: {
       type: GraphQLString,
-      description: 'The date of the election'
+      description: 'The date of the election',
+      resolve: ({ year }) => tuesday(11, year)
     },
     name: {
       type: GraphQLString,
