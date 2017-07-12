@@ -43,5 +43,8 @@
     "testPathIgnorePatterns": [
       "<rootDir>/dist/"
     ]
+  },
+  "engines": {
+    "node": "8.1.4"
   }
 }
