@@ -14,4 +14,3 @@ export function isUpForElection (reps, year) {
     // end in january after that election year
   return reps.filter(rep => moment(rep.term_end).year() === year + 1)
 }
-
