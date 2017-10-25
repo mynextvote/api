@@ -3,8 +3,8 @@
         "transform-flow-strip-types",
         "transform-runtime"
     ],
-    "presets": [
-        "es2015",
-        "stage-0"
+    "presets": ["env"],
+    "ignore": [
+      "*.spec.js"
     ]
 }

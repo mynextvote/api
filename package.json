@@ -6,7 +6,7 @@
   "repository": {},
   "license": "MIT",
   "dependencies": {
-    "cors": "^2.8.1",
+    "cors": "^2.8.4",
     "express": "^4.14.1",
     "express-graphql": "^0.6.2",
     "graphql": "^0.11.7",
@@ -15,20 +15,19 @@
     "moment": "^2.17.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.22.2",
+    "babel-cli": "^6.26.0",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-plugin-transform-runtime": "^6.22.0",
-    "babel-preset-es2015": "^6.22.0",
-    "babel-preset-stage-0": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
     "jest": "^21.2.1",
     "nodemon": "^1.11.0",
     "standard": "^10.0.3"
   },
   "scripts": {
-    "dev": "NODE_ENV=development nodemon -w src --exec \"babel-node src\"",
+    "dev": "NODE_ENV=development nodemon -w src --exec \"babel src\"",
     "test": "NODE_ENV=test standard && jest",
     "test:watch": "NODE_ENV=test jest --watch",
-    "build": "./node_modules/.bin/babel-node src -s -D -d dist",
+    "build": "babel src -d dist",
     "start": "node dist",
     "prestart": "npm run -s build"
   },
