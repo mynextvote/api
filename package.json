@@ -8,7 +8,7 @@
   "dependencies": {
     "cors": "^2.8.1",
     "express": "^4.14.1",
-    "express-graphql": "^0.6.2",
+    "express-graphql": "^0.7.0",
     "graphql": "^0.11.7",
     "isomorphic-fetch": "^2.2.1",
     "mnv-tuesday": "^0.0.1",
