@@ -9,8 +9,8 @@ export function genElectionName (year) {
 }
 
 export function isUpForElection (reps, year) {
-    // a representative is considered up for re-election if their term end is
-    // equal to the year of the election in question + 1, since terms typically
-    // end in january after that election year
+  // a representative is considered up for re-election if their term end is
+  // equal to the year of the election in question + 1, since terms typically
+  // end in january after that election year
   return reps.filter(rep => moment(rep.term_end).year() === year + 1)
 }

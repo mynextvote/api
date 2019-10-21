@@ -6,7 +6,7 @@ import schema from './schema'
 
 const PORT = process.env.PORT || 5000
 
-let app = express()
+const app = express()
 
 app.use(cors())
 

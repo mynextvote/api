@@ -1,10 +1,10 @@
 import {
-    GraphQLInt,
-    GraphQLList,
-    GraphQLNonNull,
-    GraphQLObjectType,
-    GraphQLSchema,
-    GraphQLString
+  GraphQLInt,
+  GraphQLList,
+  GraphQLNonNull,
+  GraphQLObjectType,
+  GraphQLSchema,
+  GraphQLString
 } from 'graphql'
 
 import fetch from 'isomorphic-fetch'
@@ -49,7 +49,7 @@ const ElectionType = new GraphQLObjectType({
       type: new GraphQLList(RepType),
       description: 'List of representatives whose seat is up during the specified election',
       resolve: async ({ year, zipcode }) =>
-                isUpForElection(await fetchRepsForZipcode(zipcode), year)
+        isUpForElection(await fetchRepsForZipcode(zipcode), year)
     }
   })
 })
