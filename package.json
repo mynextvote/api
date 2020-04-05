@@ -23,7 +23,7 @@
     "standard": "^14.3.1"
   },
   "scripts": {
-    "dev": "nodemon 'src/index.js' --exec babel-node",
+    "start": "nodemon 'src/index.js' --exec babel-node",
     "test": "NODE_ENV=test standard && jest",
     "test:watch": "NODE_ENV=test jest --watch"
   },
